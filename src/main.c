@@ -5,8 +5,8 @@ char				*ls_makename(char *s1, char *s2)
 	char			*str;
 	char			*ret;
 
-	if (!s1)
-		s1 = ".";
+	if (!s1 || !s2)
+        return (NULL);
 	str = (char *)ft_memalloc(sizeof(char) *
 		(ft_strlen(s1) + ft_strlen(s2) + 2));
 	if (str == NULL)

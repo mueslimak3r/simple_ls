@@ -50,6 +50,8 @@ void		mergesort_list(t_lsnode **list)
 	t_lsnode	*b;
 
 	head = *list;
+	a = NULL;
+	b = NULL;
 	if ((head == NULL) || (head->next == NULL))
 		return ;
 	fbsplit_list(head, &a, &b);
