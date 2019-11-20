@@ -26,7 +26,6 @@ void    list_insert(t_lsnode **curr, char *name, char *path)
     list_push(&new, name, path);
     if (!*curr)
     {
-        printf("yo\n");
         *curr = new;
         return ;
     }

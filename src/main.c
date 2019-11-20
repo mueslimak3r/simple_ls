@@ -36,11 +36,9 @@ void    print_and_add(t_lsnode *node, t_lsnode *contents)
     printf("\n%s:\n", node->fullpath);
     while (contents)
     {
-        //if (contents->name[0] != '.')
         printf("%s\n", contents->name);
         if (isdir(contents) && ft_strcmp(contents->name, ".") != 0 && ft_strcmp(contents->name, "..") != 0)
         {
-            printf("pushing: %s\n", contents->name);
             list_insert(&curr_pos, contents->name, node->fullpath);
             curr_pos = curr_pos->next;
         }
