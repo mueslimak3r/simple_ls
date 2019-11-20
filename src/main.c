@@ -96,7 +96,7 @@ int main(int ac, char **av)
     else
     {
         while (i < ac)
-            list_push(&list, av[i], NULL);
+            list_push(&list, av[i++], NULL);
     }
     mergesort_list(&list);
     travel(list);
