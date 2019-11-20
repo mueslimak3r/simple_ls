@@ -100,6 +100,5 @@ int main(int ac, char **av)
     }
     mergesort_list(&list);
     travel(list);
-    list = NULL;
     return (0);
 }

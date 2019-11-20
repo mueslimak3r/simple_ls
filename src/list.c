@@ -4,6 +4,8 @@ void    list_pop(t_lsnode *node)
 {
     if (node->name)
         free(node->name);
+    if (node->fullpath)
+        free(node->fullpath);
     node->next = NULL;
     free(node);
 }
