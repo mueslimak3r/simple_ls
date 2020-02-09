@@ -33,4 +33,5 @@ void    list_insert(t_lsnode **curr, char *name, char *path)
     }
     new->next = (*curr)->next;
     (*curr)->next = new;
+	*curr = new;
 }

@@ -7,11 +7,11 @@ char				*ls_makename(char *s1, char *s2)
 
 	if (!s1 || !s2)
         return (NULL);
-	str = (char *)ft_memalloc(sizeof(char) *
+	ret = (char *)ft_memalloc(sizeof(char) *
 		(ft_strlen(s1) + ft_strlen(s2) + 2));
-	if (str == NULL)
+	if (ret == NULL)
 		return (NULL);
-	ret = str;
+	str = ret;
 	while (*s1)
 		*(str++) = *(s1++);
 	if (*(s1 - 1) != '/')
@@ -38,10 +38,7 @@ void    print_and_add(t_lsnode *node, t_lsnode *contents)
     {
         printf("%s\n", contents->name);
         if (isdir(contents) && ft_strcmp(contents->name, ".") != 0 && ft_strcmp(contents->name, "..") != 0)
-        {
             list_insert(&curr_pos, contents->name, node->fullpath);
-            curr_pos = curr_pos->next;
-        }
         t_lsnode *tmp = contents;
         contents = contents->next;
         list_pop(tmp);
@@ -100,5 +97,8 @@ int main(int ac, char **av)
     }
     mergesort_list(&list);
     travel(list);
+	//show_alloc_mem();
+	//show_free_mem();
+	//count_blocks();
     return (0);
 }
