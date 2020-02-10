@@ -19,7 +19,7 @@
 # include <time.h>
 # include <sys/xattr.h>
 # include "libft.h"
-//# include "ft_malloc.h"
+# include "ft_malloc.h"
 typedef struct s_lsnode t_lsnode;
 
 struct s_lsnode

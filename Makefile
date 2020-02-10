@@ -5,8 +5,13 @@ all: $(NAME)
 
 MODULES := src includes
 LIBDIRS := libft
-LIBS := -Llibft -lft #-L/nfs/2018/c/calamber/42/github/ft_malloc/ -lftmalloc
-CFLAGS += -Ilibft/includes -Iincludes -Wall -Werror -Wextra #-g -fsanitize=address #-I/nfs/2018/c/calamber/42/github/ft_malloc/includes/
+
+LIBS := -Llibft -lft
+#LIBS += -L/nfs/2018/c/calamber/42/github/ft_malloc/ -lftmalloc
+
+CFLAGS += -Ilibft/includes -Iincludes -Wall -Werror -Wextra
+#CFLAGS += -I/nfs/2018/c/calamber/42/github/ft_malloc/includes/
+#CFLAGS += -g -fsanitize=address
 MODNAME := module.mk
 SRC :=
 

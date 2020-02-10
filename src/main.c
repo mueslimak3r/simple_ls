@@ -97,8 +97,10 @@ int main(int ac, char **av)
     }
     mergesort_list(&list);
     travel(list);
-	//show_alloc_mem();
-	//show_free_mem();
-	//count_blocks();
-    return (0);
+	/*
+	show_alloc_mem();
+	show_free_mem();
+	count_blocks();
+	*/
+	return (0);
 }
